@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <world name="delivery_world">
+    <!-- Ground Plane (green, as you set) -->
+    <model name="ground_plane">
+      <static>true</static>
+      <pose>0 0 -0.05 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>10 10 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>10 10 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0 1 0 1</ambient>
+            <diffuse>0 1 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Package 1 (for Drone 0) -->
+    <model name="package_0">
+      <static>true</static>
+      <pose>-2 1 0.05 0 0 0</pose> <!-- Next to Drone 0, 1 m north -->
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 1 0 1</ambient> <!-- Yellow -->
+            <diffuse>1 1 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Package 2 (for Drone 1) -->
+    <model name="package_1">
+      <static>true</static>
+      <pose>-1 1 0.05 0 0 0</pose> <!-- Next to Drone 1 -->
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 1 0 1</ambient>
+            <diffuse>1 1 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Package 3 (for Drone 2) -->
+    <model name="package_2">
+      <static>true</static>
+      <pose>0 1 0.05 0 0 0</pose> <!-- Next to Drone 2 -->
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 1 0 1</ambient>
+            <diffuse>1 1 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Delivery Location 0 (for Drone 0) -->
+    <model name="dropoff_0">
+      <static>true</static>
+      <pose>2 0 0.05 0 0 0</pose> <!-- Right of origin -->
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient> <!-- Red -->
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Delivery Location 1 (for Drone 1) -->
+    <model name="dropoff_1">
+      <static>true</static>
+      <pose>2 2 0.05 0 0 0</pose> <!-- Northeast -->
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient> <!-- Blue -->
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Delivery Location 2 (for Drone 2) -->
+    <model name="dropoff_2">
+      <static>true</static>
+      <pose>2 -2 0.05 0 0 0</pose> <!-- Southeast -->
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0 0.5 1</ambient> <!-- Purple -->
+            <diffuse>0.5 0 0.5 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+        <!-- Plugins for applying forces to drones -->
+        <!-- Plugins for applying forces to drones -->
+        <!-- Plugins for velocity control of drones -->
+        <!-- Plugins for velocity control of drones -->
+  </world>
+</sdf>
